@@ -1,0 +1,43 @@
+name: Bug report
+description: Something doesn't work as expected
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. **Don't paste real messages, names or phone numbers.** Blur screenshots or use a test account.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: wa-version
+    attributes:
+      label: WhatsApp Desktop version
+      description: Settings → Help and feedback, or the Microsoft Store page.
+      placeholder: "2.2546.3.0"
+    validations:
+      required: true
+  - type: input
+    id: bw-version
+    attributes:
+      label: BetterWhatsapp version or commit
+      placeholder: "v0.2.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Windows version
+      options: [Windows 11, Windows 10]
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Launcher log
+      description: The last ~40 lines of `%LOCALAPPDATA%\BetterWhatsapp\launcher.log`. It never contains message text.
+      render: text
