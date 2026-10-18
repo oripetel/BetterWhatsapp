@@ -1,0 +1,20 @@
+{
+  "name": "betterwhatsapp",
+  "version": "0.2.0",
+  "private": true,
+  "description": "A local, open-source mod for WhatsApp Desktop on Windows. Anti-Delete keeps messages deleted for everyone.",
+  "license": "MIT",
+  "author": "oripetel",
+  "homepage": "https://github.com/oripetel/BetterWhatsapp#readme",
+  "repository": { "type": "git", "url": "git+https://github.com/oripetel/BetterWhatsapp.git" },
+  "bugs": { "url": "https://github.com/oripetel/BetterWhatsapp/issues" },
+  "keywords": ["whatsapp", "whatsapp-desktop", "anti-delete", "mod", "webview2", "cdp", "windows"],
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "os": ["win32"],
+  "scripts": {
+    "start": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start.ps1",
+    "install-shortcut": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install-shortcut.ps1",
+    "check": "node --check src/inject.js && node --check src/launcher.mjs"
+  }
+}
